@@ -48,7 +48,6 @@ void ofApp::draw() {
 		FlameMesh.draw();
 
 	}
-	FlameMesh.draw();
 	//shader endl
 	ParticleShader.end();
 }

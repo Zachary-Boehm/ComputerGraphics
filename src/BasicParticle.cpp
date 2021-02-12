@@ -51,6 +51,7 @@ void BasicParticle::update(float dt)
     life -= dt * 0.5f;
 
     //update position, velocity, etc
+
 }
 
 ofImage  BasicParticle::getSprite() const
