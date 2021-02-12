@@ -1,9 +1,13 @@
-﻿  ofApp.cpp
-  ParticleSystem.vcxproj -> D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ParticleSystem\bin\ParticleSystem_debug.exe
+﻿  FlameParticle.cpp
+  FlameParticleGenerator.cpp
+  main.cpp
+  ofApp.cpp
+     Creating library bin\ParticleSystem_debug.lib and object bin\ParticleSystem_debug.exp
+  ParticleSystem.vcxproj -> D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ComputerGraphics\bin\ParticleSystem_debug.exe
   
   	                   2	D:\OpenFrameWorks\of_v0.11.0_vs2017_release\libs\fmodex\lib\vs\Win32\
-  	  *EXTRA File 		 6018560	D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ParticleSystem\bin\FreeImage.dll
+  	  *EXTRA File 		 6018560	D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ComputerGraphics\bin\FreeImage.dll
   
   	                   1	D:\OpenFrameWorks\of_v0.11.0_vs2017_release\libs\FreeImage\lib\vs\Win32\
-  	  *EXTRA File 		 1266176	D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ParticleSystem\bin\fmodex.dll
-  	  *EXTRA File 		 1312768	D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ParticleSystem\bin\fmodexL.dll
+  	  *EXTRA File 		 1266176	D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ComputerGraphics\bin\fmodex.dll
+  	  *EXTRA File 		 1312768	D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ComputerGraphics\bin\fmodexL.dll
