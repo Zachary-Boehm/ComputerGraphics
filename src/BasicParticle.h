@@ -11,7 +11,7 @@ public:
     // When a particle's life is reduced to zero, it will be removed from the particle system.
     float getLife() const override;
     //Returns the sprite assigned to this particle
-    ofImage getSprite() const;
+    int getSprite() const;
     //Returns the rotation of the particle
     float getRotation() const;
     //Returns the brightness of the particle
@@ -42,7 +42,7 @@ public:
     //Sets the color of the particle
     void setColor(glm::vec4 newColor);
     //Sets the sprite of the particle
-    void setSprite(ofImage newSprite);
+    void setSprite(int newSprite);
 
     //Other Functions ----------------------
 
@@ -57,5 +57,5 @@ private:
     glm::vec3 velocity{ glm::vec3(0.0, 0.0, 0.0) };
     glm::vec3 scale{ glm::vec3(1.0, 1.0, 1.0) };
     glm::vec4 color{ glm::vec4(1.0,1.0,1.0,1.0) };
-    ofImage sprite;
+    int sprite;
 };

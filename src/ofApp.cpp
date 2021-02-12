@@ -7,6 +7,8 @@ void ofApp::setup() {
 	buildMesh(FlameMesh, 1.0, 1.0, glm::vec3(0.0, 0.0, 0.0));
 	Flame1.load("textures/flame_01.png");
 	assert(Flame1.getWidth() != 0 && Flame1.getHeight() != 0);
+	Flame2.load("textures/flame_02.png");
+	assert(Flame2.getWidth() != 0 && Flame2.getHeight() != 0);
 	ReloadShaders();
 }
 
@@ -33,16 +35,25 @@ void ofApp::draw() {
 	using namespace glm;
 	//Shader begin
 	ParticleShader.begin();
-	for (BasicParticle f : particleSystem)
+	for (FlameParticle f : particleSystem)
 	{
 		//Get Particle translation(velocity), rotation, scale and build a 4D matrix for transformation
 		mat4 transformationMatrix = buildMatrix(/*particle position*/f.getPosition(), /*particle rotation*/f.getRotation(), /*particle scale*/f.getScale());
-
 		//Pass the 4D matrix into the shader for the transformation to be applied
-		ParticleShader.setUniformMatrix3f("transformation", /*transformation matrix*/ transformationMatrix);
+		ParticleShader.setUniformMatrix4f("transformation", /*transformation matrix*/ transformationMatrix);
 
 		//Get Any brightnes, color, and other variables and pass to fragment shader
-		ParticleShader.setUniformTexture("Tex", f.getSprite(), 0);
+		switch (f.getSprite())
+		{
+		case 0:
+			ParticleShader.setUniformTexture("Tex", Flame1, 0);
+			break;
+		case 1:
+			ParticleShader.setUniformTexture("Tex", Flame2, 0);
+			break;
+		}
+		
+		
 
 		//draw the quad
 		FlameMesh.draw();
@@ -77,7 +88,7 @@ glm::mat4 ofApp::buildMatrix(const glm::vec3& trans, const float& rot, const glm
 	mat4 translation = translate(trans);
 	mat4 rotation = rotate(rot, vec3(0.0, 0.0, 1.0));
 	mat4 scaling = scale(_scale);
-	return translation * rotation * scaling;
+	return scaling*translation*rotation;
 }
 
 //--------------------------------------------------------------

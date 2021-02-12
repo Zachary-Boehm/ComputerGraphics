@@ -45,6 +45,7 @@ private:
 
 	//Images
 	ofImage Flame1;
+	ofImage Flame2;
 
 	//others
 	bool needsReload{ true };

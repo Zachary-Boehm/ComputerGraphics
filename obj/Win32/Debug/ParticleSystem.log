@@ -1,7 +1,4 @@
-﻿  FlameParticle.cpp
-  FlameParticleGenerator.cpp
-  main.cpp
-  ofApp.cpp
+﻿  BasicParticle.cpp
      Creating library bin\ParticleSystem_debug.lib and object bin\ParticleSystem_debug.exp
   ParticleSystem.vcxproj -> D:\OpenFrameWorks\of_v0.11.0_vs2017_release\apps\myApps\ComputerGraphics\bin\ParticleSystem_debug.exe
   

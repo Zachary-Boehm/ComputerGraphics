@@ -40,7 +40,7 @@ void BasicParticle::setColor(glm::vec4 newColor)
     color = newColor;
 }
 
-void BasicParticle::setSprite(ofImage newSprite)
+void BasicParticle::setSprite(int newSprite)
 {
     sprite = newSprite;
 }
@@ -48,13 +48,13 @@ void BasicParticle::setSprite(ofImage newSprite)
 void BasicParticle::update(float dt)
 {
     //Life decrease by 0.5f per dt which is 0.5 per second
-    life -= dt * 0.5f;
+    life -= dt * 0.01f;
 
     //update position, velocity, etc
 
 }
 
-ofImage  BasicParticle::getSprite() const
+int  BasicParticle::getSprite() const
 {
     return sprite;
 }
